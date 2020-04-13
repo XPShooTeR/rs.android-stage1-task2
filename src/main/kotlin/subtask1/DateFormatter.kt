@@ -42,21 +42,21 @@ class DateFormatter {
         val weekDay: String
         days = (yearFunW.toLong()-1) * 365 + ((yearFunW.toLong()-1) / 4).toLong()
         when (monthFunW.toInt()-1) {
-            1 -> days = days + 31
-            2 -> days = days + 31 + 28
-            3 -> days = days + 31 + 28 + 31
-            4 -> days = days + 31 + 28 + 31 + 30
-            5 -> days = days + 31 + 28 + 31 + 30 + 31
-            6 -> days = days + 31 + 28 + 31 + 30 + 31 + 30
-            7 -> days = days + 31 + 28 + 31 + 30 + 31 + 30 + 31
-            8 -> days = days + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31
-            9 -> days = days + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30
-            10 -> days = days + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
-            11 -> days = days + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30
+            1 -> days += 31
+            2 -> days += 31 + 28
+            3 -> days += 31 + 28 + 31
+            4 -> days += 31 + 28 + 31 + 30
+            5 -> days += 31 + 28 + 31 + 30 + 31
+            6 -> days += 31 + 28 + 31 + 30 + 31 + 30
+            7 -> days += 31 + 28 + 31 + 30 + 31 + 30 + 31
+            8 -> days += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31
+            9 -> days += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30
+            10 -> days += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
+            11 -> days += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30
         }
         if ((yearFunW.toInt() % 4 == 0) and (monthFunW.toInt() > 2))
-            days = days + 1
-        days = days + dayFunW.toLong()
+            days += 1
+        days += dayFunW.toLong()
         when ((days % 7).toInt()){
             0 -> weekDay = "суббота"
             1 -> weekDay = "воскресенье"
