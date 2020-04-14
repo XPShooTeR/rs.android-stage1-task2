@@ -19,7 +19,6 @@ class DateFormatter {
                 itogDate = day + " " + monthProp(month) + ", " + weekOpred(day, month, year)
         }
         return itogDate
-        throw NotImplementedError("Not implemented")
     }
     fun monthProp (monthFun: String) =
         when (monthFun){

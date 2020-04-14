@@ -16,6 +16,5 @@ class Abbreviation {
             return "YES"
         else
             return "NO"
-        throw NotImplementedError("Not implemented")
     }
 }

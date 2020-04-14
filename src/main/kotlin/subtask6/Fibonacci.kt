@@ -2,8 +2,17 @@ package subtask6
 
 class Fibonacci {
 
-    // TODO: Complete the following function
     fun productFibonacciSequenceFor(n: Int): IntArray {
-        throw NotImplementedError("Not implemented")
+        val itogArr = IntArray(3, {0})
+        var nextElem: Int
+        itogArr[1] = 1
+        while (itogArr[0] * itogArr[1] < n){
+            nextElem = itogArr[0] + itogArr[1]
+            itogArr[0] = itogArr[1]
+            itogArr[1] = nextElem
+        }
+        if (itogArr[0] * itogArr[1] == n)
+            itogArr[2] = 1
+        return itogArr
     }
 }

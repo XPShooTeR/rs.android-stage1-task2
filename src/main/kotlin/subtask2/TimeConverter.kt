@@ -19,7 +19,6 @@ class TimeConverter {
         else
             timeItog = ""
         return timeItog
-        throw NotImplementedError("Not implemented")
     }
     fun hourToText(hourFun: Int) = when (hourFun){
         1 -> "one"
